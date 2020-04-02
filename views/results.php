@@ -20,7 +20,7 @@ function DPRenderResults($Poll) {
       if(!$TitleExists && !$HideTitle) {
         //do nothing
       }
-      else if(!count($Poll->Questions)) {
+      else if(empty($Poll->Questions)) {
         echo Wrap(T('Plugins.DiscussionPolls.NoReults', 'No results for this poll'));
       }
       else {
